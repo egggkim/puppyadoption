@@ -1,28 +1,38 @@
 /*@import a Google Font here!*/
 
 body {
-  font-family: 'Oswald', sans-serif;
-  background-color: #e2e2e2;
+  background-image: url('../images/bg-img.jpg');
+  background-repeat: repeat;
   text-align: center;
+  color: #555656;
 }
 
 h1 {
-  font-family: "Brain Flower";
-  font-size: 80px;
-  margin-top: 40px;
+  font-family: "Amatic SC";
+  font-weight: bold;
+  font-size: 70px;
+
+  background-color: #b4dee7;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 2px -2px #d3d3d3;
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  top: 40px;
 }
 
 .container {
-  width: 750px;
+  width: 900px;
 
   position: absolute;
   top: 150px;
   left: 50%;
-  margin-left: -375px;
+  margin-left: -450px;
 
   text-align: center;
 
-  background-color: white;
   border-radius: 20px;
 }
 
@@ -31,36 +41,52 @@ h1 {
   text-align: center;
   margin: 10px 20px;
 
+  background-color: #eeeeee;
   width: 40%;
 
   border-radius: 20px;
 }
 
 h2 {
-  font-family: "Brain Flower"; 
-  font-size: 45px;
+  font-family: "Amatic SC"; 
+  font-size: 40px;
 
   padding: 10px;
 
   border-radius: 20px;
-  background-color: #d3d3d3;
+  background-color: #ffb65b;
   color: white;
 
   margin: 20px 10px;
 }
 
 .dashed {
-  border: 1px dashed black;
+  border: 1px dashed #8ece6e;
   border-radius: 20px;
   margin: 0px 10px 10px 10px;
   padding: 10px;
+  background-color: white;
 
 }
 
 p {
+  font-family: "Amatic SC"; 
+  font-size: 20px;
+  padding: 5px;
+}
+
+span {
+  font-family: "Amatic SC"; 
+  font-size: 20px;
   padding: 5px;
 }
 
 #name {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 20px;
+  box-shadow: 3px 3px 2px -2px #d3d3d3;
 }
