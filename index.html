@@ -10,8 +10,9 @@
 		<script src="js/html5shiv.js"></script>
 		<![endif]-->
 
-		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		
 		<script src="js/angular.js"></script>
 		<script src="js/main.js"></script>
@@ -20,31 +21,43 @@
 	</head>
 
 	<body>
+
+		<h1>PUPPY ADOPTION DAY</h1>
 <!-- PUPPIES CONTROLLER CONNECTED AS PUPPIES ALIAS -->
 		<!-- MAIN CONTAINER DIV -->
 		<div class="container" ng-controller="PuppiesController as puppies">
 
-{{ 1+1 }}
 			<!-- LEFT COLUMN, ADOPTED PROPERTY FALSE -->	
 			<div class="left">
-				<h2>Puppies For Adoption</h2>
-					<article ng-repeat="puppy in puppies.puppyList">
-						<p>My name is {{ puppy.puppyName }}.</p>
+				<h2>Adopt me!</h2>
+					<article class="dashed" ng-repeat="puppy in puppies.puppyList">
+						<p id="name">My name is {{ puppy.puppyName | uppercase }}.</p>
 						<p>I am {{ puppy.monthsOld }} months old. 
-						<br> I am a {{ puppy.gender }}</p>
+						<br> I am a {{ puppy.gender }}.</p>
 
 						<img ng-src="{{ puppy.image}}" />
-						<input class="checkbox" type="checkbox" ng-model="puppy.adopt"
+						<br> 
+						<input class="checkbox" type="checkbox" ng-model="puppy.adopted" ng-click="puppies.adoptPuppy()">
 					</article>
-				{{ puppy.puppyList.adopted === false}}
-
 			</div>
 			
 			<!-- RIGHT COLUMN, ADOPTED PROPERTY TRUE -->	
 			<div class="right">
-				<h2>Adopted Puppies!</h2>			
+				<h2>I have a home</h2>			
 
-					{{ puppy.puppyList.adopted }}
+
+
+					<article class="dashed" ng-repeat="puppy in puppies.puppyList">
+						<p id="name">My name is {{ puppy.puppyName | uppercase }}.</p>
+						<p>I am {{ puppy.monthsOld }} months old. 
+						<br> I am a {{ puppy.gender }}.</p>
+
+						<img ng-src="{{ puppy.image}}" />
+						<br> 
+						<input class="checkbox" type="checkbox" ng-model="puppy.adopted" ng-click="puppies.adoptPuppy()">
+					</article>
+
+
 
 			</div>
 

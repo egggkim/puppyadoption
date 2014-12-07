@@ -34,14 +34,19 @@ function PuppiesController() {
 		}
 	];
 
-	function completedTodos(){
-		var count = 0;
-		for(var i = 0; i < this.todoList.length; i++){
-			if(this.todoList[i].done){
-				count++;
-			}
-		}
-		return count;
+	this.adoptPuppy 	= adoptPuppy;
+	this.unadoptPuppy = unadoptPuppy;
+
+	function adoptPuppy() {
+		this.adopted = true;
+		// REMOVE THIS CONSOLE.LOG AT A LATER DATE, CURRENTLY IN PLACE FOR TESTING
+		console.log("false to true")
+	}
+
+	function unadoptPuppy() {
+		this.adopted = false;
+		// REMOVE THIS CONSOLE.LOG AT A LATER DATE, CURRENTLY IN PLACE FOR TESTING
+		console.log("true to false")		
 	}
 
 }
