@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html ng-app="puppyApp">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Poppppieees</title>
+
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/angular.js"></script>
+		<script src="js/main.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.js"></script>		
+		<script src="js/PuppiesController.js"></script>
+	</head>
+
+	<body>
+<!-- PUPPIES CONTROLLER CONNECTED AS PUPPIES ALIAS -->
+		<!-- MAIN CONTAINER DIV -->
+		<div class="container" ng-controller="PuppiesController as puppies">
+
+{{ 1+1 }}
+			<!-- LEFT COLUMN, ADOPTED PROPERTY FALSE -->	
+			<div class="left">
+				<h2>Puppies For Adoption</h2>
+					<article ng-repeat="puppy in puppies.puppyList">
+						<p>My name is {{ puppy.puppyName }}.</p>
+						<p>I am {{ puppy.monthsOld }} months old. 
+						<br> I am a {{ puppy.gender }}</p>
+
+						<img ng-src="{{ puppy.image}}" />
+						<input class="checkbox" type="checkbox" ng-model="puppy.adopt"
+					</article>
+				{{ puppy.puppyList.adopted === false}}
+
+			</div>
+			
+			<!-- RIGHT COLUMN, ADOPTED PROPERTY TRUE -->	
+			<div class="right">
+				<h2>Adopted Puppies!</h2>			
+
+					{{ puppy.puppyList.adopted }}
+
+			</div>
+
+		</div>
+	</body>
+</html>
