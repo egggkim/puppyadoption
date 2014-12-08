@@ -45,6 +45,8 @@ h1 {
   width: 40%;
 
   border-radius: 20px;
+
+  float: left;
 }
 
 h2 {
@@ -54,10 +56,14 @@ h2 {
   padding: 10px;
 
   border-radius: 20px;
-  background-color: #ffb65b;
+  background-color: #8ece6e;
   color: white;
 
   margin: 20px 10px;
+}
+
+#need-home {
+  background-color: #ffb65b;
 }
 
 .dashed {

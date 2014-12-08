@@ -2,11 +2,11 @@ angular
 	.module("puppyApp")
 	.controller("PuppiesController", PuppiesController);
 
-function PuppiesController() {
+function PuppiesController(){
 	
 	this.puppyList = [
 		{	puppyName: 'Baylor',
-			monthsOld: 5,
+			monthsOld: 12,
 			gender: 'boy',
 			image: "images/baylor.jpg",
 			adopted: true,
@@ -20,7 +20,7 @@ function PuppiesController() {
 		},
 
 		{	puppyName: 'Parker',
-			monthsOld: 12,
+			monthsOld: 8,
 			gender: 'boy',
 			image: "images/parker.jpg",
 			adopted: false
@@ -33,20 +33,5 @@ function PuppiesController() {
 			adopted: false
 		}
 	];
-
-	this.adoptPuppy 	= adoptPuppy;
-	this.unadoptPuppy = unadoptPuppy;
-
-	function adoptPuppy() {
-		this.adopted = true;
-		// REMOVE THIS CONSOLE.LOG AT A LATER DATE, CURRENTLY IN PLACE FOR TESTING
-		console.log("false to true")
-	}
-
-	function unadoptPuppy() {
-		this.adopted = false;
-		// REMOVE THIS CONSOLE.LOG AT A LATER DATE, CURRENTLY IN PLACE FOR TESTING
-		console.log("true to false")		
-	}
 
 }

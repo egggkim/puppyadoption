@@ -31,36 +31,30 @@
 
 			<!-- LEFT COLUMN, ADOPTED PROPERTY FALSE -->	
 			<div class="left">
-				<h2>Adopt me!</h2>
-					<article class="dashed" ng-repeat="puppy in puppies.puppyList">
+				<h2 id="need-home">Adopt me!</h2>
+					<article class="dashed" ng-repeat="puppy in puppies.puppyList | filter: {adopted: false}">
 						<p id="name">My name is {{ puppy.puppyName | uppercase }}.</p>
 						<p>I am {{ puppy.monthsOld }} months old. 
 						<br> I am a {{ puppy.gender }}.</p>
 
 						<img ng-src="{{ puppy.image}}" />
 						<br> 
-						<span>Adopt?</span><input class="checkbox" type="checkbox" ng-model="puppy.adopted" ng-click="puppies.adoptPuppy()">
+						<span>Adopt?</span><input class="checkbox" type="checkbox" ng-model="puppy.adopted" >
 					</article>
 			</div>
 			
 			<!-- RIGHT COLUMN, ADOPTED PROPERTY TRUE -->	
 			<div class="right">
-				<h2>I have a home!</h2>			
-
-
-
-					<article class="dashed" ng-repeat="puppy in puppies.puppyList">
+				<h2>I have a home!</h2>
+					<article class="dashed" ng-repeat="puppy in puppies.puppyList | filter: {adopted: true}">
 						<p id="name">My name is {{ puppy.puppyName | uppercase }}.</p>
 						<p>I am {{ puppy.monthsOld }} months old. 
 						<br> I am a {{ puppy.gender }}.</p>
 
 						<img ng-src="{{ puppy.image}}" />
 						<br> 
-						<span>Adopt?</span><input class="checkbox" type="checkbox" ng-model="puppy.adopted" ng-click="puppies.adoptPuppy()">
+						<span>Adopt?</span><input class="checkbox" type="checkbox" ng-model="puppy.adopted" >
 					</article>
-
-
-
 			</div>
 
 		</div>
